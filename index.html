@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cafe</title>
+    <meta name="description" content="コーヒーと美味しい料理を提供するカフェ">
+
+  <!--CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Philosopher" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">    
+  </head>
+
+  <body>
+
+    <div class="home">
+      <header class="page-header">
+        <h1><a href="index.html"><img class="logo" src="images/cafe_logo.png" alt="カフェ ホーム"></a></h1>
+        <nav>
+          <ul class="main-nav">
+            <li>Concept</li>
+            <li>Menu</li>
+            <li>Photo</li>
+            <li>Access</li>
+            <li>Social</li>
+          </ul>
+        </nav>
+      </header>  
+
+      <div class="home-content wrapper">
+      <h2 class="home-page-title">Cafe</h2>
+      <p>おしゃれなカフェでのひととき</p>
+      </div>
+    </div>
+    
+    <div class="concept-content wrapper">
+      <h3 class="page-title">Concept</h3>
+      <p>
+        「おしゃれなカフェでほっと一息」
+      </p>
+      <p>
+        ひとりでも、おともだちとでも。<br>
+        みんなの癒しの場所になる。<br>
+        是非cafeで癒しのひとときをお過ごしください。
+      </p>
+    </div>
+
+    <div class="menu-content wrapper">
+      <h4 class="page-title">Menu</h4>
+      <div class="wrapper grid">
+        <div class="menu">
+          <img src="images/contact.jpg" alt="coffee">
+          <p>Coffee</p>
+          <p>バリスタが入れた美味しいコーヒー</p>
+        </div>
+        <div class="menu">
+          <img src="images/cake.jpg" alt="cake">
+          <p>Cake</p>
+          <p>全て手作りの自家製ケーキ</p>
+        </div>
+        <div class="menu">
+          <img src="images/lunch.jpg" alt="lunch">
+          <p>Lunch</p>
+          <p>野菜たっぷりのランチ</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="photos-content wrapper">
+      <h5 class="page-title">Photos</h5>
+      <!--Javascript-->
+        <section>
+            <div class="slide">
+                <div class="image_box">
+                    <img id="main_image" src="images/coffee slide.jpeg">
+                </div>
+                <div class="toolbar">
+                    <div class="nav">
+                        <div id="prev"></div>
+                        <div id="next"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+      <!--Javascript-->
+    </div>
+
+    <div class="access-content wrapper">
+      <h6 class="page-title">Access</h6>
+      <div class="location">
+        <div class="location-info">
+          <p>
+            住所：東京都港区<br>
+            電話番号：03-1111-1111<br>
+            営業時間：11:00~22:00<br>
+            休日：月曜 
+          </p>
+        </div> 
+        <div class="location-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12964.942764481726!2d139.72713877911983!3d35.67119816493919!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b811f57f195%3A0x11a6a34cc5074741!2z44CSMTA3LTAwNTIg5p2x5Lqs6YO95riv5Yy66LWk5Z2C!5e0!3m2!1sja!2sjp!4v1602717004082!5m2!1sja!2sjp" width="700" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="page-footer">
+      <div class="wrapper">
+        <p><small>&copy; 2020 Cafe</small></p>
+      </div>
+    </footer>
+    
+    <!--Javascript-->
+    <script>
+      'use strict';
+
+      const images = ['images/coffee slide.jpeg','images/omuraisu slide.jpeg','images/sand slide.jpg','images/cake slide.jpg','images/humberger slide.jpg'];
+      let current = 0;
+
+      function changeImage(num){
+        if(current + num >=0 && current + num < images.length){
+          current += num;
+          document.getElementById('main_image').src = images[current];
+        }
+      };
+
+      document.getElementById('prev').onclick = function(){
+        changeImage(-1);
+      };
+      document.getElementById('next').onclick = function(){
+        changeImage(1);
+      };
+    </script>
+    <!--Javascript-->
+
+  </body>
+</html>
