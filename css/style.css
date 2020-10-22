@@ -105,7 +105,7 @@ img{
 
 .grid{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
   margin-top: 50px;
 }
 
@@ -193,3 +193,71 @@ img{
    padding-top: 10px;
    font-size: 20px;
  }
+
+ /* レスポンシブ
+ ----------------------------------------------------------------------*/
+
+ @media (max-width: 600px){
+
+  /* HEADER */
+
+  .main-nav li{
+    font-size: 30px;
+  }
+
+  .home-page-title{
+    font-size: 150px;
+  }
+
+  .page-title {
+    font-size: 80px;
+  }
+ 
+  .home-content{
+    margin-top: 20%;
+  }
+
+  .home-content p{
+    font-size: 25px;
+  }
+
+  /* CONCEPT */
+  .concept-content{
+    height: auto;
+  }
+  
+  /* MENU */
+  .menu-content{
+    height: auto;
+  }
+
+  .menu{
+    margin-bottom: 3%;
+  }
+  
+  
+  .menu p{
+    font-size: 17px;
+
+  }
+
+  /* ACCESS */
+  .access-content{
+    height: max-content;
+  }
+
+  .location{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location-info{
+    margin-bottom: 40px;
+  }
+
+  .location-info p{
+    font-size: 25px;
+  }
+
+
+}
