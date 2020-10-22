@@ -199,20 +199,11 @@ img{
 
  @media (max-width: 600px){
 
-
-
   /* HEADER */
 
   .page-header{
     flex-direction: column;
     align-items: center;
-  }
-  .main-nav{
-    margin: auto 0;
-  }
-  .main-nav li{
-    font-size: 10px;
-    margin: auto 6px;
   }
 
   .home-page-title{
@@ -250,12 +241,7 @@ img{
     font-size: 17px;
   }
 
-  /* PHOTOS */
- 
-  .slide{
-    width: auto;
-  }
-
+  
   /* ACCESS */
   
   .access-content{
@@ -266,8 +252,10 @@ img{
   .location{
     flex-direction: column;
     align-items: center;
-    height: auto;
   }
 
+  .location-map{
+    height: auto;
+  }
 
 }
