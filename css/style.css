@@ -77,9 +77,10 @@ html{
 --------------------------------------------------------------------*/
 
 .concept-content{
-  height: 400px;
+  height: 330px;
   text-align: center;
   margin-top: 50px;
+  background-color: antiquewhite;
 }
 
 .concept-content p{
@@ -87,6 +88,31 @@ html{
   font-family: serif;
   font-size: 20px;
 }
+
+
+/* CONCEPT party
+---------------------------------------------------------------------*/
+
+#party{
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#party p{
+  font-size: 20px;
+  margin: 10px 0;
+}
+
+button{
+  background-color:tan;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 30px;
+  width: 200px;
+}
+
+
 
 /* MENU
 ---------------------------------------------------------------------*/

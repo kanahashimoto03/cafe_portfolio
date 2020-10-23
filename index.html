@@ -46,6 +46,36 @@
       </p>
     </div>
 
+    <!--Vue.js-->
+
+    <script src="https://jp.vuejs.org/js/vue.js"></script>
+
+
+    <div id="party">
+    <p>結婚式二次会やパーティーについてはこちら</p>
+    <button @click="ok = !ok">click!</button>
+    <template v-if="ok">
+      <p>〜結婚式二次会について〜</p>
+      <p>結婚式の二次会は80名様までご利用頂けます</p>
+      <p>料金：1時間 / 10000円〜</p>
+
+      <p>〜パーティーについて〜</p>
+      <p>貸し切りでご利用頂けます</p>
+      <p>ご利用に関してはお店までお電話ください</p>
+    </template>
+    </div>
+
+    <script>
+    new Vue ({
+    el: '#party',
+    data: {
+      ok: false
+    }
+    })
+    </script>
+
+    <!--Vue.js-->
+
     <div class="menu-content wrapper">
       <h4 class="page-title">Menu</h4>
       <div class="wrapper grid">
